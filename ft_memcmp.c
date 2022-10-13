@@ -18,7 +18,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
             if(str1[i] == '\0' && str2[i] == '\0')
                 return 0;
             else
-                return(0);
+                return (str1[i] - str2[i]);
         }       
     }
     return 0;
