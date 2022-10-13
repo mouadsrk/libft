@@ -13,7 +13,7 @@ size_t ft_strlen(char  *str)
 int main()
 {
     
-    printf("%lu\n",ft_strlen("b"));
-    printf("%lu\n",strlen("b"));
+    printf("%lu\n",ft_strlen("bllo"));
+    printf("%lu\n",strlen("1234"));
     return 0;
 }

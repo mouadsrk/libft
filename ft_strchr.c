@@ -20,7 +20,7 @@ int main()
 {
     char s[] = "hello";
 
-    printf("%s\n", ft_strchr(s,'m'));
-    printf("%s\n", strchr(s,'m'));
+    printf("%s\n", ft_strchr(s,'l'));
+    printf("%s\n", strchr(s,'l'));
 
 }

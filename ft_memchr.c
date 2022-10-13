@@ -4,9 +4,10 @@
 void *memchr(const void *s, int c, size_t n)
 {
    size_t i;
-   char a,*str;
+   unsigned char a,*str;
 
-   str = (char*) s;
+   a = (unsigned char) c;
+   str = (unsigned char*) s;
    i = 0;
    while(str[i] && i < n)
    {
@@ -21,5 +22,6 @@ void *memchr(const void *s, int c, size_t n)
 
 int main()
 {
-   printf("%s",memchr("hello",108,4));
+   char str [] = "hello";
+   printf("%s",memchr("hello",'l',4));
 }

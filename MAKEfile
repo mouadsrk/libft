@@ -1,0 +1,37 @@
+#cc = gcc
+
+# source.c : $(wildcard *.c)
+# source.o:= $(wildcard *.o)
+
+#clean:
+#	rm -f *.o
+	
+# exe.o:
+# 	cc -c source.c
+
+# exe: 
+# objects = ft_isalpha.o ft_isascii.o ft_isprint.o 
+# all: $(objects)
+
+# # These files compile via implicit rules
+# foo.o: foo.c
+# bar.o: bar.c
+# all.o: all.c
+
+# all.c:
+# 	gcc ft_isalpha.c
+
+# %.c:
+# 	touch $@
+
+# clea:
+# 	rm -f *.c *.o all
+blah: blah.o
+	cc blah.o -o blah 
+
+blah.o: blah.c
+	cc -c blah.c -o blah.o 
+
+# Typically blah.c would already exist, but I want to limit any additional required files
+blah.c:
+	echo "int main() { return 0; }" > blah.c 

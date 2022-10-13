@@ -24,7 +24,7 @@ void *ft_memset(void *b, int c, size_t len)
 int main ()
 {
     char b [] = "hello";
-     ft_memset(b,'5',3);
+     ft_memset(b,300,3);
    // memset(b,'5',3);
     printf("%s\n",b);
 }
