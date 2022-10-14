@@ -28,5 +28,5 @@ int main ()
 {
     char d [] = "hello";
     char s [] = "hello";
-    printf("%d",ft_memcmp(d,s,1));
+    printf("%d",ft_memcmp(d,s,6));
 }
