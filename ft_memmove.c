@@ -5,27 +5,26 @@
    {
      size_t i;
      i = 0;
-     char *str,* dstr,*swap;
+     char *str,* dstr;
 
         str = ( char*)src;
         dstr = (char*) dst;
         while(str[i] && i < len)
             i++;
-        i -= 2;
-        len--;
-        while((str[i]) )
+        i -= 1;
+        
+        while((str[i]) && i >= 0)
         {
             dstr[i] = str[i];
-            len--;
-            i++;
+            i--;
         }
         return 0;
     }
  int main()
 {
-    char src1[] ="mmm";
+    char src1[] ="mmmm";
     char str[] = "hello";
-    memmove(str,src1,2);
+    memmove(str,src1,4);
     printf("%s\n",str);
     printf("%s\n",src1);
 

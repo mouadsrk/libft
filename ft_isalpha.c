@@ -6,7 +6,7 @@
 /*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:44:50 by mserrouk          #+#    #+#             */
-/*   Updated: 2022/10/13 23:44:51 by mserrouk         ###   ########.fr       */
+/*   Updated: 2022/10/15 23:11:03 by mserrouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_isalpha(int c);
+
 
 int ft_isalpha(int c)
 {
