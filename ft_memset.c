@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include"libft.h"
 
   
 void *ft_memset(void *b, int c, size_t len)
@@ -21,10 +22,10 @@ void *ft_memset(void *b, int c, size_t len)
     return (b);
 }
 
-int main ()
-{
-    char b [] = "hello";
-     ft_memset(b,300,3);
-   // memset(b,'5',3);
-    printf("%s\n",b);
-}
+// int main ()
+// {
+//     char b [] = "hello";
+//      ft_memset(b,300,3);
+//    // memset(b,'5',3);
+//     printf("%s\n",b);
+// }

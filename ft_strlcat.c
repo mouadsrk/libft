@@ -11,7 +11,7 @@ size_t ft_strlen(char  *str)
 }
 
 
-size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t  ft_strlcat(char *  dst, const char *  src, size_t dstsize)
 {
     size_t i,a;
     char *dstr,*sstr;
@@ -38,6 +38,6 @@ int main ()
 {
     char dst[20] = "helloewewgwgw";
     char src[]  = "mmmmmmmmmmm";
-    printf("%lu\n",strlcat(dst,src,20));
+    printf("%lu\n",ft_strlcat(dst,src,20));
     printf("%s",dst);
 }

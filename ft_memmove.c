@@ -24,7 +24,7 @@
 {
     char src1[] ="mmmm";
     char str[] = "hello";
-    memmove(str,src1,4);
+    ft_memmove(str,src1,4);
     printf("%s\n",str);
     printf("%s\n",src1);
 

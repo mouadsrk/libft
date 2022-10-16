@@ -1,6 +1,7 @@
-#include<string.h>
+#include "libft.h"
 #include<stdio.h>
-#include<unistd.h>
+#include<string.h>
+
 
 
 void ft_bzero(void *s, size_t n)
@@ -11,6 +12,6 @@ int main()
 {
     
     char ss[] = "hellokk";
-    ft_bzero(ss,5);
+    bzero(ss,5);
     printf("%c",ss[6]);
 }

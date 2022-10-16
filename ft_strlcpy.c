@@ -47,6 +47,6 @@ int main ()
     
     char d[10];
     char s[0];
-    printf("%lu\n",strlcpy(d,s,10));
+    printf("%lu\n",ft_strlcpy(d,s,10));
     printf("%s",d);
 }

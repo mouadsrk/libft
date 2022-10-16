@@ -1,7 +1,7 @@
 #include <string.h>
 #include<stdio.h>
 
-void *memchr(const void *s, int c, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
    size_t i;
    unsigned char a,*str;
@@ -23,5 +23,5 @@ void *memchr(const void *s, int c, size_t n)
 int main()
 {
    char str [] = "hello";
-   printf("%s",memchr("hello",'l',4));
+   printf("%s",ft_memchr("hello",'l',4));
 }
