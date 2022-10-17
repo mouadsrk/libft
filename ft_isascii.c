@@ -6,14 +6,12 @@
 /*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:45:15 by mserrouk          #+#    #+#             */
-/*   Updated: 2022/10/13 23:45:16 by mserrouk         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:02:48 by mserrouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-
-#include<stdio.h>
-#include<ctype.h>
+#include"libft.h"
 
 int ft_isascii(int c)
 {
@@ -22,9 +20,9 @@ int ft_isascii(int c)
     return 0;    
 }
 
-int main()
-{
-    printf("%d\n",ft_isascii(135));
-    printf("%d",isascii(135));
-    return 0;
-}
+// int main()
+// {
+//     printf("%d\n",ft_isascii(135));
+//     printf("%d",isascii(135));
+//     return 0;
+// }

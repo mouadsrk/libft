@@ -18,10 +18,10 @@ char * ft_strdup(const char *s1)
     }
     return(ptr);
 }
-int main ()
-{
-    char s[] = "hello";
-    char *sr;
-    printf("%s",ft_strdup(s));
+// int main ()
+// {
+//     char s[] = "hello";
+//     char *sr;
+//     printf("%s",ft_strdup(s));
 
-}
+// }

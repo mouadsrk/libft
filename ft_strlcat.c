@@ -1,15 +1,4 @@
-#include <string.h>
-#include<stdio.h>
-
-size_t ft_strlen(char  *str)
-{
-    size_t  i;
-    i = 0;
-    while((str[i]))
-        i++;
-    return i;    
-}
-
+#include"libft.h"
 
 size_t  ft_strlcat(char *  dst, const char *  src, size_t dstsize)
 {
@@ -25,7 +14,7 @@ size_t  ft_strlcat(char *  dst, const char *  src, size_t dstsize)
             dstr[i]=sstr[a];
         else
         {
-            dstr [i] = '\0';
+        dstr[i] ='\0'; 
             return (i);
         }
         i++;
@@ -34,10 +23,10 @@ size_t  ft_strlcat(char *  dst, const char *  src, size_t dstsize)
     return i;
 
 }
-int main ()
-{
-    char dst[20] = "helloewewgwgw";
-    char src[]  = "mmmmmmmmmmm";
-    printf("%lu\n",ft_strlcat(dst,src,20));
-    printf("%s",dst);
-}
+// int main ()
+// {
+//     char dst[20] = "helloewewgwgw";
+//     char src[]  = "mmmmmmmmmmm";
+//     printf("%lu\n",ft_strlcat(dst,src,20));
+//     printf("%s",dst);
+// }

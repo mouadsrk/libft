@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<string.h>
+#include"libft.h"
 
 size_t ft_strlen(const char  *str)
 {
@@ -12,7 +11,7 @@ size_t ft_strlen(const char  *str)
 
 // int main()
 // {
-    
+//     ft_strlen(NULL);
 //     printf("%lu\n",ft_strlen("bllo"));
 //     printf("%lu\n",strlen("1234"));
 //     return 0;

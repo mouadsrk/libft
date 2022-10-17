@@ -1,37 +1,55 @@
-#cc = gcc
+NAME = libft.a
 
-# source.c : $(wildcard *.c)
-# source.o:= $(wildcard *.o)
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -f
 
-#clean:
-#	rm -f *.o
-	
-# exe.o:
-# 	cc -c source.c
+FILES = ft_memset \
+		ft_bzero \
+		ft_memcpy \
+		ft_memchr \
+		ft_memcmp \
+		ft_strlen \
+		ft_strlcpy \
+		ft_strlcat \
+		ft_strchr \
+		ft_strrchr \
+		ft_strnstr \
+		ft_strncmp \
+		ft_atoi \
+		ft_isalpha \
+		ft_isdigit \
+		ft_isalnum \
+		ft_isascii \
+		ft_isprint \
+		ft_toupper \
+		ft_tolower \
+		ft_calloc \
+		ft_strdup \
+		ft_memmove \
 
-# exe: 
-# objects = ft_isalpha.o ft_isascii.o ft_isprint.o 
-# all: $(objects)
+SRCS_DIR = ./
+SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 
-# # These files compile via implicit rules
-# foo.o: foo.c
-# bar.o: bar.c
-# all.o: all.c
+OBJS_DIR = ./
+OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 
-# all.c:
-# 	gcc ft_isalpha.c
+.c.o: $(SRCS)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
-# %.c:
-# 	touch $@
+$(NAME): $(OBJS)
+	$(AR) $@ $^
 
-# clea:
-# 	rm -f *.c *.o all
-blah: blah.o
-	cc blah.o -o blah 
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $^
 
-blah.o: blah.c
-	cc -c blah.c -o blah.o 
+all: $(NAME)
 
-# Typically blah.c would already exist, but I want to limit any additional required files
-blah.c:
-	echo "int main() { return 0; }" > blah.c 
+clean:
+	$(RM) $(OBJS) $(OBJS_B)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: clean all

@@ -6,7 +6,7 @@
 /*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:44:50 by mserrouk          #+#    #+#             */
-/*   Updated: 2022/10/15 23:11:03 by mserrouk         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:02:42 by mserrouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <ctype.h>
 
 
+#include"libft.h"
 
 int ft_isalpha(int c)
 {
@@ -23,11 +24,11 @@ int ft_isalpha(int c)
     return 0;
 }
 
-int main ()
-{
-    printf("%d\n",ft_isalpha('n'));
-    printf("%d",isalpha('n'));
-}
+// int main ()
+// {
+//     printf("%d\n",ft_isalpha('n'));
+//     printf("%d",isalpha('n'));
+// }
 
 
 

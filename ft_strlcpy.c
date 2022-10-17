@@ -1,15 +1,4 @@
-#include <string.h>
-#include<stdio.h>
-
-static size_t ft_strlen(char * src)
-{
-    size_t i;
-    i = 0;
-    
-    while (src[i])
-    i++;
-    return i;
-}
+#include"libft.h"
 
 size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize)
 {
@@ -19,7 +8,7 @@ size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize)
     sstr = (char*) src;
      i = ft_strlen(sstr);
      a= 0;
-    while(a < dstsize)
+    while(a < dstsize )
     {
         if(sstr[a])
         {
@@ -42,11 +31,11 @@ size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize)
     }
     return i;
 }
-int main ()
-{
+// int main ()
+// {
     
-    char d[10];
-    char s[0];
-    printf("%lu\n",ft_strlcpy(d,s,10));
-    printf("%s",d);
-}
+//     char d[10];
+//     char s[0];
+//     printf("%lu\n",ft_strlcpy(d,s,-1));
+//     printf("%s",d);
+// }

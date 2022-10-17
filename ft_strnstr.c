@@ -1,6 +1,4 @@
-#include <string.h>
-#include<stdio.h>
-
+#include"libft.h"
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -29,14 +27,14 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (NULL);
 }
- int main ()
- { 
-          const char *largestring = "Foo Bar fBar Baz";
-           const char *smallstring = "Bar B";
-           char *ptr;
+//  int main ()
+//  { 
+//           const char *largestring = "Foo Bar fBar Baz";
+//            const char *smallstring = "Bar B";
+//            char *ptr;
 
-           ptr = ft_strnstr(largestring, smallstring, 10);
-           printf("%s",ptr);
+//            ptr = ft_strnstr(largestring, smallstring, 10);
+//            printf("%s",ptr);
 
 
-}
+// }

@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<string.h>
+#include"libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -22,8 +21,8 @@ int ft_atoi(const char *str)
         }
     return r * s;            
 }
-int main()
-{
-    char c[0] = "";
-    printf("%d",ft_atoi(c));
-}
+// int main()
+// {
+//     char c[] = "1";
+//     printf("%d",ft_atoi(c));
+// }
