@@ -26,9 +26,9 @@ char **ft_split(char const *s, char c)
     arr = (char**)malloc(r * sizeof(char*));
     if (!arr)
         return (NULL);
-   i = 0;
-j = 0;
-while(i < r)
+    i = 0;
+    j = 0;
+    while(i < r)
     {   
         b = 0;
         while(s[j] != c && s[j])
@@ -44,13 +44,13 @@ while(i < r)
         }
         j++;
     }
-    i = 0;
-    j = 0;
-    while(i < r)
-    {   
-        b = 0;
-        while(s[j] != c && s[j])
-        {
+        i = 0;
+        j = 0;
+            while(i < r)
+            {   
+                b = 0;
+                while(s[j] != c && s[j])
+            {
             arr[i][j] = s[j];
             printf("%c",arr[i][j]);
             b++;
