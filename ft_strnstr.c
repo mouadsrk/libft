@@ -9,6 +9,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     i = 0;
     ln = 0;
     b = 0;
+    if((!needle && !len) || (!len && !haystack) || (!needle && !haystack))
+        return 0;
     while(ptr[i] && i < len)
     {
         if(ptr[i] == needle[ln])
@@ -17,7 +19,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
             {
                  ln++;
                if (needle[ln] == '\0')
-                return (&ptr[b]); 
+                return (ptr+b); 
                 i++;
             }
                 return(NULL);
@@ -27,14 +29,14 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (NULL);
 }
-//  int main ()
-//  { 
-//           const char *largestring = "Foo Bar fBar Baz";
-//            const char *smallstring = "Bar B";
-//            char *ptr;
+ int main ()
+ { 
+          const char *largestring = "hello iupiupuiipBar B";
+           const char *smallstring = "Bar";
+           char *ptr;
 
-//            ptr = ft_strnstr(largestring, smallstring, 10);
-//            printf("%s",ptr);
+           ptr = ft_strnstr(largestring, smallstring, 10);
+           printf("%s",ptr);
 
 
-// }
+}

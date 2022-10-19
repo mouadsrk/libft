@@ -8,6 +8,8 @@ void *ft_memcpy(void  *dst, const void  *src, size_t n)
     d = (char*) dst;
     s = (char *)src;
     i = 0;
+    if (!src && !n)
+        return (NULL);
     while(n--)
     {
        d[i] = s[i];
@@ -18,8 +20,7 @@ void *ft_memcpy(void  *dst, const void  *src, size_t n)
 int main()
 {
     
-     printf("%lu",sizeof(size_t));
     
     
-    // printf("%s",ft_memcpy(((void *)0), ((void *)0), 3));
+    printf("%s",ft_memcpy(((void *)0), ((void *)0), 0));
 }
