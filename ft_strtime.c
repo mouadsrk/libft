@@ -53,10 +53,10 @@ char *ft_strtrim(char const *s1, char const *set)
     ptr[cont] = '\0';
     return ptr;
 }
-int main()
-{
-    char s1 [] = "abcccab";
-    char set [] = "ab";
-    printf("%s",ft_strtrim(s1,set));
-    return 0;
-}
+// int main()
+// {
+//     char s1 [] = "abcccab";
+//     char set [] = "ab";
+//     printf("%s",ft_strtrim(s1,set));
+//     return 0;
+// }

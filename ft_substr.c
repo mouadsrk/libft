@@ -22,9 +22,9 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
     ptr[j] = '\0';
     return (ptr);
 }
-int main (){
-    char s[] = "serroukh";
-    char *d = ft_substr(s,1,8);
-    printf("%s",d);
-    free(d);
-}
+// int main (){
+//     char s[] = "serroukh";
+//     char *d = ft_substr(s,1,8);
+//     printf("%s",d);
+//     free(d);
+// }

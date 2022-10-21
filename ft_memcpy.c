@@ -17,10 +17,10 @@ void *ft_memcpy(void  *dst, const void  *src, size_t n)
     }      
     return (dst);
 }
-int main()
-{
+// int main()
+// {
     
     
     
-    printf("%s",ft_memcpy(((void *)0), ((void *)0), 0));
-}
+//     printf("%s",ft_memcpy(((void *)0), ((void *)0), 0));
+// }

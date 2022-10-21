@@ -27,10 +27,10 @@ char *ft_strjoin(char const *s1, char const *s2)
     }
     return(ptr);
 }
-int main ()
-{
-    char s1[0]  ;
-    char s2[0] ;
-    char *ptr = ft_strjoin(s1,s2);
-    printf("%s",ptr);
-}
+// int main ()
+// {
+//     char s1[0]  ;
+//     char s2[0] ;
+//     char *ptr = ft_strjoin(s1,s2);
+//     printf("%s",ptr);
+// }

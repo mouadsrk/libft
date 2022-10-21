@@ -1,5 +1,16 @@
 #include"libft.h"
 
+void ft_free(char **arr,size_t r)
+{
+	size_t i;
+
+	i = 0;
+	while(i < r)
+	{
+		free(arr[i]);
+	}
+}
+
 size_t ft_lastchar(char const *s, char c)
 {
 	size_t i , r;
@@ -14,9 +25,14 @@ size_t ft_lastchar(char const *s, char c)
 	}
 	return r;
 }
-char **ft_allocation(char **arr,char const *s,char c,size_t r,size_t i,size_t j)
+ft_allocation(char **arr,char const *s,char c,size_t r)
 {
 	size_t  b;
+	size_t i;
+	size_t j;
+
+	j = 0;
+	i = 0;
 
 	while(i < r)
 	{   
@@ -26,16 +42,15 @@ char **ft_allocation(char **arr,char const *s,char c,size_t r,size_t i,size_t j)
 			b++;
 			j++;
 		}
-		if(b != 0) 
+		if(b != 0)
 		{ 
 			arr[i] = (char*)malloc(b * sizeof(char*)+1);
 			i++;
 		}
 		j++;
 	}
-	return(arr);
 }
-char **ft_strmake(char **arr, char const *s, char c, size_t r)
+void ft_strmake(char **arr, char const *s, char c, size_t r)
 {
 	size_t		b;
 	size_t		i;
@@ -53,14 +68,13 @@ char **ft_strmake(char **arr, char const *s, char c, size_t r)
 			b++;
 			j++;
 		}
-		if(b != 0) 
-		{  
+		if(b != 0)
+		{
 			arr[i][b] = '\0';    
 			i++;
 		}
 		j++;
 	}
-	return(arr); 
 }
 
 char **ft_split(char const *s, char c)
@@ -68,7 +82,7 @@ char **ft_split(char const *s, char c)
 	size_t i;
 	size_t r;
 	size_t j;
-	size_t b; 
+
 	char **arr;
 
 	i = 0;
@@ -83,81 +97,30 @@ char **ft_split(char const *s, char c)
 	if (!arr)
 		return (NULL);
 	arr[r] = NULL;
-	arr = ft_allocation(arr,s,c,r,i,j);
-	arr = ft_strmake(arr,s,c,r);
+	arr = ft_allocation(arr,s,c,r);
+	ft_strmake(arr,s,c,r);
  
 	return(arr);
 }
-int main(){
+// int main(){
 	
-	char s[] ="++hello+++i'm+split++!";
-	char c = '+' ;
-	char **arr = ft_split(s, c);
-	int i = 0;
-	int j = 0;
+// 	char s[] ="++hello+++i'm+split++!";
+// 	char c = '+' ;
+// 	char **arr = ft_split(s[0],c);
+// 	int i = 0;
+// 	int j = 0;
 
-	// while(arr[i])
-	// {
-	//     while(arr[i][j])
-	//     {
-	//          printf("%c",arr[i][j]);
-	//         j++;
-	//     }
-	//     j = 0;
-	//     i++;
-	// }
+// 	while(arr[i])
+// 	{
+// 	    while(arr[i][j])
+// 	    {
+// 	         printf("%c",arr[i][j]);
+// 	        j++;
+// 	    }
+// 	    j = 0;
+// 	    i++;
+// 	}
 	 
-}
-
-// char **ft_split(char const *s, char c)
-// {
-//     size_t i,r,j,b;
-	
-//     char **arr;
-
-//     r =ft_lastchar(s,c);
-//     arr = (char**)malloc(r * sizeof(char*));
-//     if (!arr)
-//         return (NULL);
-//   
-//     i = 0;
-//     j = 0;
-//     while(i < r)
-//     {   
-//         b = 0;
-//         while(s[j] != c && s[j])
-//         {
-//             arr[i][j] = s[j];
-//             printf("%c",arr[i][j]);
-//             b++;
-//             j++;
-//         }
-//         if(b != 0) 
-//         {  
-//             arr[i][b] = '\0';    
-//             printf("\n");
-//             i++;
-//         }
-//         j++;
-//     }
-//  i = 0:
-// j = 0;
-// while(i < r)
-//     {   
-//         b = 0;
-//         while(s[j] != c && s[j])
-//         {
-//             b++;
-//             j++;
-//         }
-//         if(b != 0) 
-//         {
-		   
-//             arr[i] = (char*)malloc(b * sizeof(char*)+1);
-//             i++;
-//         }
-//         j++;
-//     }
-//     return(arr);
 // }
+
 
