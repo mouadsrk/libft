@@ -25,7 +25,7 @@ size_t ft_lastchar(char const *s, char c)
 	}
 	return r;
 }
-ft_allocation(char **arr,char const *s,char c,size_t r)
+void ft_allocation(char **arr,char const *s,char c,size_t r)
 {
 	size_t  b;
 	size_t i;
@@ -33,7 +33,6 @@ ft_allocation(char **arr,char const *s,char c,size_t r)
 
 	j = 0;
 	i = 0;
-
 	while(i < r)
 	{   
 		b = 0;
@@ -82,24 +81,19 @@ char **ft_split(char const *s, char c)
 	size_t i;
 	size_t r;
 	size_t j;
-
 	char **arr;
 
 	i = 0;
 	j = 0;
-
 	if(!s)
 		return (NULL);
-
 	r = ft_lastchar(s,c);
-	
 	arr = (char**)malloc((r + 1) * sizeof(char*));
 	if (!arr)
 		return (NULL);
 	arr[r] = NULL;
-	arr = ft_allocation(arr,s,c,r);
+	ft_allocation(arr,s,c,r);
 	ft_strmake(arr,s,c,r);
- 
 	return(arr);
 }
 // int main(){
