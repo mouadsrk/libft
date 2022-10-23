@@ -6,27 +6,38 @@
 {
     char *d;
     char *s;
-    int a;
- 
+    size_t a;
+
+  
+    if(dst == src == len  )
+      return dst;
+
     d = (char *) dst;
-    s = (char*) src ; 
-    a =  len  -1  ; 
-    if(d > s)
+    s = (char *) src;
+    a =  len - 1;
+    if (d > s)
     {
-    while(a >= 0)
-    {
-      d[a] = s[a];
-     a--;
-    }
+      while(a > 0)
+      {
+        d[a] = s[a];
+        a--;
+         if(a == 0)
+          d[a] = s[a];
+      }
+     
     }
     else
-      s = memcpy(s,d, len);  
-    return( (void*)dst);
+      s = ft_memcpy(d, s, len);  
+    return ((void*)dst);
 }
+
 // int main()
 // {
-//   char d[] = "mouad serrouk";
-//     ft_memmove(d + 2 , d  , 11);
-//     printf("%s",d);
+ 
+//   char * r2 = ft_memmove("", "" - 1, 0);
+//   printf("%s",r2);
+          
+        
+  
 
 // }
