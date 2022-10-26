@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-size_t ft_intlen(int n)
+size_t ft_intlen(long n)
 {
     size_t i;
     size_t con;
@@ -25,25 +25,27 @@ size_t ft_intlen(int n)
 
 char *ft_itoa(int n)
 {   
+    long a;
     char *str;
     size_t len;
     size_t i;
 
-    len = ft_intlen(n);
+    a = n;
+    len = ft_intlen(a);
     i = 10;
     str =(char*) malloc(len + 1 );
     if(!str)
         return (NULL);
-     if(n < 0)
+     if(a< 0)
     {
       str[0] = '-';
-      n *=-1;
+      a *=-1;
     }
     str[len--]= '\0';
-    while(n > 0)
+    while(a > 0)
     {
-        str[len]= (n % i) + 48   ;
-        n /=10;
+        str[len]= (a % i) + 48   ;
+        a /=10;
         len-- ;
     }
    
@@ -51,7 +53,7 @@ char *ft_itoa(int n)
 }
 
 
-int main()
-{
-  printf("%s",ft_itoa(456-3));
-}
+// int main()
+// {
+//   printf("%s",ft_itoa(2147483647));
+// }
