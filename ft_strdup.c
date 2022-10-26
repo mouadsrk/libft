@@ -7,10 +7,9 @@ char * ft_strdup(const char *s1)
     char *ptr;
 
     len = ft_strlen(s1);
-    len++;
-    ptr =(char*) malloc(len);
+    ptr =(char*) malloc(len + 1);
     if(!ptr)
-        return NULL;
+        return 0;
     i = 0;
     while(s1[i])
     {
@@ -20,17 +19,13 @@ char * ft_strdup(const char *s1)
     ptr[i] = '\0';
     return(ptr);
 }
+
 // int main ()
 // {
-//      char s[] = "hello";
-//     char *s;
-//     printf("%s",ft_strdup(s));
+     
 
+//     ft_strdup("");
+         
 
-
-//     char *s = malloc(-1);
-//     if (s == NULL)
-//         printf("yes\n");
-//     else
-//         printf("hjkkhk\n");
 // }
+

@@ -1,4 +1,4 @@
-#include"libft.h"
+#include<stdio.h>
 
 size_t ft_strfind(char const *s1, char const *set)
 {
@@ -21,7 +21,7 @@ size_t ft_strrfind(char const *s1, char const *set)
 {
     size_t i,j;
     j = 0;
-    i = strlen(s1) - 1;
+    i = ft_strlen(s1) - 1;
     // if(!set)
     //  return 0; 
     while(set[j])
@@ -53,10 +53,3 @@ char *ft_strtrim(char const *s1, char const *set)
     ptr[cont] = '\0';
     return ptr;
 }
-// int main()
-// {
-//     char s1 [] = "abcccab";
-//     char set [] = "ab";
-//     printf("%s",ft_strtrim(s1,set));
-//     return 0;
-// }

@@ -13,12 +13,13 @@ void *ft_memset(void *b, int c, size_t len)
     return (b);
 }
 
-// int main ()
-// {
-//     char *b1 = (char*)malloc(sizeof(char) * (0xF0000 + 1));
-
-//     ft_memset(b1,'5',0xF0000);
-//     memset(b1,'\5',0xF0000);
-//     printf("%lu\n",strlen(b1));
-//     free(b1);
-// }
+int main ()
+{
+    int i;
+    i = 0;
+    ft_memset(&i,337,1);
+    
+     
+    printf("%d",i);
+      
+}

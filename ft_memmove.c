@@ -8,8 +8,10 @@
     char *s;
     size_t a;
 
-  
-    if(dst == src == len  )
+  if(len == 0)
+    return dst;
+
+    if(src == dst)          
       return dst;
 
     d = (char *) dst;
@@ -33,11 +35,9 @@
 
 // int main()
 // {
- 
-//   char * r2 = ft_memmove("", "" - 1, 0);
-//   printf("%s",r2);
-          
-        
   
-
+//   printf("%s",memmove((void*)0,"", 1));
 // }
+
+
+

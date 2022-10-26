@@ -5,26 +5,43 @@
 
 char *ft_substr(char const *s, unsigned int start,size_t len)
 {
-    size_t j,i;
+    size_t j;
     char *ptr;
-    i = len - start;
-    if (!s)
+    if(!s)
         return (NULL);
-    ptr = (char *) malloc(i * sizeof(char) + 1);
-        if(!ptr)
-            return (NULL);
+    if( start >= ft_strlen(s))
+        return ft_strdup("");
+    if(start + len >= ft_strlen(s)) 
+        ptr = (char *) malloc((ft_strlen(s) - start + 1 ) * sizeof(char) );
+    else
+        ptr = (char *) malloc((len + 1 ) * sizeof(char) );
+    if(!ptr)
+        return (NULL);        
+    
     j = 0;
-    while(s[(size_t)start + j])
+    while(s[start + j] && ( j < len))
     {
-        ptr[j] = s[start + j];
+        ptr[j] = s[start + j ];
         j++;
-    }
+    }     
     ptr[j] = '\0';
     return (ptr);
 }
-// int main (){
-//     char s[] = "serroukh";
-//     char *d = ft_substr(s,1,8);
-//     printf("%s",d);
-//     free(d);
+// int main ()
+// {
+//       char *str = "i just want this part #############";
+//         size_t size = 20;
+//         printf("%s",ft_substr(str,5, 20));      
 // }
+
+
+
+
+
+
+
+
+
+
+
+

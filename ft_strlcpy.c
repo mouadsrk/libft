@@ -40,7 +40,7 @@ size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize)
     }
     if(dstsize > 0)
     dst[a] = '\0';
-    return a = strlen(src);
+    return  ft_strlen(src);
 }
 
 // int main()

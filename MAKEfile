@@ -2,10 +2,10 @@ NAME = libft.a
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
+AR = ar -rcs
 RM = rm -f
 
-FILES = ft_memset \
+FILES = ft_memset.c \
 		ft_bzero \
 		ft_memcpy \
 		ft_memchr \
@@ -28,6 +28,7 @@ FILES = ft_memset \
 		ft_calloc \
 		ft_strdup \
 		ft_memmove \
+		ft_split \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
@@ -41,8 +42,8 @@ OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $^
+# bonus: $(OBJS_B)
+# 	$(AR) $(NAME) $^
 
 all: $(NAME)
 
