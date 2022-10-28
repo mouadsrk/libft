@@ -15,11 +15,19 @@ void *ft_memset(void *b, int c, size_t len)
 
 int main ()
 {
-    int i;
-    i = 0;
-    ft_memset(&i,337,1);
-    
-     
-    printf("%d",i);
-      
+    int i[] ={1,2,2,3};
+    size_t b;
+    b = 0;
+
+    while(b < 16)
+    {
+         ft_memset(&i+b,2,1);
+         b += 4;
+    }
+    b = 0;
+    while(b <= 4)
+    { 
+    printf("%d",i[b]);
+    b++;
+    }  
 }
