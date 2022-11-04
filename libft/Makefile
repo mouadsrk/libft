@@ -6,7 +6,7 @@
 #    By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/29 02:29:42 by mserrouk          #+#    #+#              #
-#    Updated: 2022/11/02 18:21:36 by mserrouk         ###   ########.fr        #
+#    Updated: 2022/11/04 17:10:06 by mserrouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ FILES = ft_atoi.c \
 	ft_tolower.c	\
 	ft_toupper.c	\
 
-CC = gcc
+CC = cc
 FLG = -Wall -Wextra -Werror
 AR = ar rc
 RM = rm -f

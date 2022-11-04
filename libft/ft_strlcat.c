@@ -1,103 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/03 23:29:09 by mserrouk          #+#    #+#             */
+/*   Updated: 2022/11/04 18:00:04 by mserrouk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"libft.h"
 
-size_t  ft_strlcat(char * dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t i;
-    size_t a;
-    size_t c;
-     
-    c = ft_strlen(src);
+	size_t	i;
+	size_t	len;
+	size_t	c;
 
-    if(!dstsize)
-        return c ;
-    
-    a = 0;
-    i = ft_strlen(dst);
-    while(  i + a  < dstsize -1  )
-    {
-        dst[i + a] = src[a];
-        a++;
-    } 
-    dst [i + a] ='\0';
-    if(dstsize < i)
-        return  c + dstsize ; 
-    return  i + c ; 
+	c = ft_strlen(src);
+	i = 0;
+	if (dstsize == 0)
+		return (c);
+	len = ft_strlen(dst);
+	if (len > dstsize)
+		return (c + dstsize);
+	while (i + len < dstsize - 1 && src[i])
+	{
+		dst[i + len] = src [i];
+		i++;
+	}
+	dst[i + len] = '\0';
+	return (c + len);
 }
-
-
-
-// int main ()
-// {   
-//   char dest[15] = "";
-//   char src[]= "";
-    
-
-//     printf("%lu\n", strlcat(dest, src, 20));  
-//     printf("%s",dest);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// size_t  ft_strlcat(char * dst, const char *src, size_t dstsize)
-// {
-//     size_t i;
-//     size_t a;
-//     size_t c;
-    
-//     c = ft_strlen(src);
-    
-//     if(!dstsize )
-//         return c ;
-//     a = 0;
-//     i = ft_strlen(dst);
-//     while(src[a] && i + a + 1 < dstsize && dst[i+ a]  )
-//     {
-//         dst[i + a] = src[a];
-//         a++;
-//     } 
-//     dst [i + a] ='\0';
-//     if(dstsize < i)
-//         return  c + dstsize ;  
-//     else if (dstsize >=  i)
-//         return  i + c ;
-//     return 0;
-// }

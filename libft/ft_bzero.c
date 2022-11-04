@@ -6,20 +6,13 @@
 /*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 02:25:15 by mserrouk          #+#    #+#             */
-/*   Updated: 2022/10/29 02:25:20 by mserrouk         ###   ########.fr       */
+/*   Updated: 2022/11/03 20:37:34 by mserrouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
-// int main()
-// {
-    
-//     char ss[] = "hellokk";
-//     bzero(ss,5);
-//     printf("%c",ss[6]);
-// }

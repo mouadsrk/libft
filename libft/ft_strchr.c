@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/03 21:45:45 by mserrouk          #+#    #+#             */
+/*   Updated: 2022/11/03 21:46:22 by mserrouk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	int				i;
-	char			*str;
-	 char	b;
+	int		i;
+	char	*str;
+	char	b;
 
-	b = ( char)c;
+	b = (char) c;
 	str = (char *)s;
 	i = 0;
 	while (str[i] && str[i] != b)
@@ -15,11 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return (str + i);
 	return (NULL);
 }
-// int main()
-// {
-//     char s[] = "tripouille";
-
-//    printf("%s\n", ft_strchr(s, 't' + 256) == s);
-//     printf("%s\n", strchr(s, 't' + 256) == s);
-
-// }

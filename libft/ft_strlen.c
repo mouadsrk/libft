@@ -1,19 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/03 22:10:49 by mserrouk          #+#    #+#             */
+/*   Updated: 2022/11/03 23:01:27 by mserrouk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"libft.h"
 
-size_t ft_strlen(const char  *str)
+size_t	ft_strlen(const char *str)
 {
-   
-    size_t  i;
-    i = 0;
-    while(str[i])
-        i++;
-    return i;    
-}
+	size_t	i;
 
-// int main()
-// {
-    // ft_strlen(NULL);
-    // printf("%lu\n",ft_strlen("bllo"));
-//     printf("%lu\n",strlen(NULL));
-//     return 0;
-// }
+	i = 0;
+	while (str [i])
+		i++;
+	return (i);
+}
