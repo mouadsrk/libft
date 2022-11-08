@@ -6,7 +6,7 @@
 /*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 20:04:55 by mserrouk          #+#    #+#             */
-/*   Updated: 2022/11/07 23:25:06 by mserrouk         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:44:14 by mserrouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int			i;
 	int			s;
-	int 		r;
+	long long 		r;
 
 	i = 0;
 	r = 0;
@@ -35,5 +35,5 @@ int	ft_atoi(const char *str)
 		r = r * 10 + str[i] - 48;
 		i++;
 	}
-	return ((int) r * s);
+	return ( (int)r * s);
 }

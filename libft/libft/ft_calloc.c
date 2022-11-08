@@ -6,7 +6,7 @@
 /*   By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 20:37:59 by mserrouk          #+#    #+#             */
-/*   Updated: 2022/11/03 20:46:27 by mserrouk         ###   ########.fr       */
+/*   Updated: 2022/11/08 19:16:03 by mserrouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
