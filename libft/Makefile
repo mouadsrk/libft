@@ -6,7 +6,7 @@
 #    By: mserrouk <mserrouk@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/29 02:29:42 by mserrouk          #+#    #+#              #
-#    Updated: 2022/11/04 17:10:06 by mserrouk         ###   ########.fr        #
+#    Updated: 2022/11/08 19:03:29 by mserrouk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,10 @@ FILES = ft_atoi.c \
 	ft_strtrim.c	\
 	ft_substr.c		\
 	ft_tolower.c	\
-	ft_toupper.c	\
+	ft_toupper.c	
+
+BONUSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+			ft_lstdelone.c ft_lstclear.c
 
 CC = cc
 FLG = -Wall -Wextra -Werror
@@ -54,18 +57,26 @@ RM = rm -f
 
 OBJ = $(FILES:.c=.o)
 
+BBJ= $(BONUSRC:.c=.o) 
+
+
+		
 all : $(NAME)
 
-$(NAME) : $(OBJ) libft.h
-	$(AR) $(NAME) $(OBJ)
+$(NAME) : $(OBJ)
+	$(AR)  $(NAME) $(OBJ) 
 
-%.o :%.c
-	$(CC) -c $< $(FLG)
+
+bonus : $(BBJ)
+	$(AR)  $(NAME) $(BBJ)
+		
+%.o :%.c libft.h
+	$(CC) $(FLG) -c $< 
 
 clean :
-	$(RM) $(OBJ)
+	$(RM) $(OBJ)  $(BBJ)
 
 fclean : clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(BBJ)
 
-re : clean all
+re : clean all bonus
