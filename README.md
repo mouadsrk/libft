@@ -30,14 +30,4 @@
 
 ---
 
-## 🧪 How to Compile and Use
 
-```bash
-# Clone repository and navigate
-git clone https://github.com/your_username/libft.git
-cd libft
-
-# Compile the static library
-make
-
-# The result is libft.a, which can be linked to other projects
